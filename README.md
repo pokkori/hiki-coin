@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# $HIKI Coin
 
-## Getting Started
+> 引きこもりをテーマにしたSolanaミームコインのランディングページ
 
-First, run the development server:
+**本番URL**: https://hiki-coin.vercel.app
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## サービス概要
+
+「Never leave your room. Always go to the moon.」をコンセプトにした引きこもり系ミームコイン($HIKI)のLP。
+pump.funでのローンチを想定したCA（コントラクトアドレス）コピー機能付きワンページサイト。
+
+## ページ構成
+
+- ヒーローセクション（$HIKIロゴ・キャッチコピー）
+- Tokenomics（トークン配分）
+- How to Buy（購入手順）
+- CAアドレスコピー機能
+
+## 技術スタック
+
+- **フレームワーク**: Next.js 14 (App Router)
+- **言語**: TypeScript
+- **スタイル**: Tailwind CSS
+- **デプロイ**: Vercel
+
+## ディレクトリ構成
+
+```
+hiki-coin/
+├── app/
+│   ├── page.tsx      # メインページ（ワンページ構成）
+│   └── layout.tsx    # レイアウト・メタデータ
+└── package.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## セットアップ
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+pump.funでコインをローンチ後、`app/page.tsx` の `CA_ADDRESS` を実際のコントラクトアドレスに変更する。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```typescript
+const CA_ADDRESS = "YOUR_CONTRACT_ADDRESS_HERE";
+```
 
-## Learn More
+## ローカル起動
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm install
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## デプロイ
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx vercel --prod
+```
