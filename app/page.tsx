@@ -196,6 +196,7 @@ export default function HikiPage() {
             $HIKIはエンターテインメント目的のミームコインです。投資を推奨するものではありません。
           </p>
           <p className="text-white/20 text-xs mt-4">© 2026 $HIKI — Never outside, always on-chain.</p>
+          <p className="text-white/20 text-xs mt-2"><a href="/privacy" className="underline hover:text-white/40">Privacy Policy</a></p>
         </div>
       </section>
     </main>
